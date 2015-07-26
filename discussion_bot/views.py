@@ -1,6 +1,6 @@
 from flask import request, render_template, make_response
 from discussion_bot import app
-from discussion_bot.api_util import create_content, api_url
+from discussion_bot.api_util import create_content, api_url, slack_post
 from discussion_bot.bot_util import reply_to
 
 
@@ -21,11 +21,13 @@ def dis_reply():
     site_id = data.get('siteId')
     container_id = data.get('threadId')
     user_id = data.get('userId')
-    print text
     text = reply_to(text)
     content_data = render_template('post.json', site_id=site_id, container_id=container_id,
                                    user_id=user_id, text=text)
     create_content(api_url(), site_id, 'post', content_data, user_id)
+    # post on slack
+    slack_post('Wikia id: {siteId}, Post id: {threadId}, Message: {text}'.
+               format(text=text, siteId=site_id, threadId=container_id))
     return make_response(('', 200))
 
 
