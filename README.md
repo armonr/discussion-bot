@@ -5,6 +5,7 @@ A conversation simulating bot tailored for Wikia discussion.
 
 Provided a Wikia discussion post data, discussion bot aims to provide a relevant fact as a post reply.
 
+This package uses [cobe](https://github.com/pteichman/cobe)
 
 Usage
 ======
