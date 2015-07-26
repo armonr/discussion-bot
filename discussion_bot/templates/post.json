@@ -1,0 +1,9 @@
+{
+  "siteId": {{ site_id }},
+  "creatorId": {{ user_id }},
+  "isViewable": true,
+  "isEditable": true,
+  "isHeld": false,
+  "body": {{ text|tojson|safe }},
+  "threadId": {{ container_id }}
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form method="post" action="{{ url_for('post') }}">
+        <label title="Write something">
+            <textarea name="text"></textarea>
+        </label>
+        <input type="submit" value="Post"/>
+    </form>
+    {% if post_text %}
+    <div>You: <p>{{ post_text }}</p></div>
+    {% endif %}
+    {% if bot_reply %}
+    <div>Bot: <p>Here is a fun fact: {{ bot_reply }}</p></div>
+    {% endif %}
+</body>
+</html>
