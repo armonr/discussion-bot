@@ -15,7 +15,7 @@ setup(
     description='A conversation emulator bot for Wikia discussion service',
     long_description=long_description,
     install_requires=[
-        'Flask==0.10.1',
+        'Flask==1.0.2',
         'PyYAML==3.11',
         'requests==2.7.0',
         'cobe==2.1.2'
