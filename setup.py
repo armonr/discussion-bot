@@ -17,7 +17,7 @@ setup(
     install_requires=[
         'Flask==1.0.2',
         'PyYAML==3.11',
-        'requests==2.7.0',
+        'requests==2.20.0',
         'cobe==2.1.2'
     ],
     include_package_data=True,
