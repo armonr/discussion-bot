@@ -16,7 +16,7 @@ setup(
     long_description=long_description,
     install_requires=[
         'Flask==1.0.2',
-        'PyYAML==4.2b1',
+        'PyYAML==5.4',
         'requests==2.20.0',
         'cobe==2.1.2'
     ],
